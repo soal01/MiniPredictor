@@ -37,6 +37,16 @@ class FootballDataOrg_reader:
         return list_of_H2H
 
 
+name_converter = {'FC Bayern München' : 'bayern' , 'Hertha BSC': 'hertha', 'BV Borussia 09 Dortmund' : ,
+'FC Augsburg': , 'SV Werder Bremen':, 'TSV Fortuna 95 Düsseldorf':, 'Bayer 04 Leverkusen':,
+'SC Paderborn 07':,'SC Freiburg':, '1. FSV Mainz 05':,'VfL Wolfsburg':, '1. FC Köln':,
+'Borussia Mönchengladbach':, 'FC Schalke 04':,'Eintracht Frankfurt':,'TSG 1899 Hoffenheim':,
+'1. FC Union Berlin':,'RB Leipzig':}
+1347220
+1347294
+
+1347454
+#тупо инкрементим и парсим
 # reader = FootballDataOrg_reader()
 # reader.read_data(26)
 # list_of_H2H = reader.getH2h(26)
