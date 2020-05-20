@@ -69,7 +69,25 @@ class SportsRu_parser:
             first_value, second_value = self.get_metric(metric)
             ans.extend([first_value, second_value])
             #print(first_value, second_value)
+        #print('len=', len(ans))
         return ans
+
+    def parse_file(self, filename):
+        with open(filename, 'r') as f:
+            data = f.read()
+        self.set_new_str(data)
+        return self.parse()
+
+    def parse_files(self):
+        rows = []
+        for id in range(self.start_id, self.end_id):
+            try:
+                rows.append(self.parse_file(f"src/html_files/{id}.html"))
+                print(id, "successfully parsed")
+            except Exception :
+                print(id, 'have problems')
+
+        return rows
 
 
 '''parser = SportsRu_parser()
